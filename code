@@ -1,0 +1,15 @@
+# Bill Splitter for Groups
+
+try:
+    total_bill = float(input("Enter the total bill amount: "))
+    num_people = int(input("Enter the number of people: "))
+
+    if num_people <= 0:
+        print("Number of people should be greater than zero.")
+    else:
+        amount_per_person = total_bill / num_people
+        # Rounded to 2 decimal places
+        print(f"Each person should pay: ₹{amount_per_person:.2f}")
+
+except ValueError:
+    print("Invalid input. Please enter numeric values only.")
